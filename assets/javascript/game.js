@@ -17,18 +17,26 @@
 
             if (userGuess === computerChoice) {
                 wins++;
+                guesses = 10;
+                lettersGuessed = [];
+                computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+                //console.log(computerChoice);
             } else {
                 guesses--;
             }
             if (guesses === 0) {
                 losses++;
+                guesses = 10;
+                lettersGuessed = [];
+                computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+                //console.log(computerChoice);
             }
-            
+        
     document.getElementById("wins").innerHTML = wins;
     document.getElementById("losses").innerHTML = losses;
     document.getElementById("guesses").innerHTML = guesses;
     document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
-    
+
     };
     
 
